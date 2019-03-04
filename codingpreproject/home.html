@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Depraved and Disoriented</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body onload="updateClock(); setInterval('updateClock()', 1000 )">
+            <div class="headbar">
+                <div>
+                    <img src="https://static.wixstatic.com/media/374676_2f313d4a492d4684a19928e749ef4380.jpg/v1/fill/w_130,h_159,al_c,q_80,usm_0.66_1.00_0.01/374676_2f313d4a492d4684a19928e749ef4380.webp" />
+                    <h1 class="headbar">Depraved and Disoriented</h1>
+                    <h3 class="headbar">shenanigans and Baggins-ans</h3>
+                </div>
+                <Div class="Navbar">
+                    <a class= "NavbarActive" href="home.html">Home</a>
+                    <a class= "Navbar" href="blog.html">Blog</a>
+                    <a class= "Navbar" href="sale.html">For Sale</a>
+                    <a class= "Navbar" href="bio.html">Bio</a>
+                    <a class= "Navbar" href="News.html">News and Events</a>
+                    <a class= "Navbar" href="Contact.html">Contact</a>
+                    <span class= "clock" id="clock">&nbsp;</span>
+                    <button onclick="play()">Play Music</button>
+                </div>
+            </div>
+            <div class="semitrans">
+                <h4>Welcome and <label id="lblGreetings"></label></h4>
+                <p>So, you found my little blog of things you may or may not care about.
+                   Stay if you wish; there will be more features coming in due time.</p>
+            </div>
+            <div class="video">
+                <h4>Video of The Month</h4>
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ekP0LQEsUh0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>  
+            <div class="semitrans">
+                <p>          "I have found that only one thing can truely rival an idea so profound and imposible as unconditional love: the light of the stars; and the day mankind blots them out with their pollution and cement buildings i will weep for they have lost the only thing that gave them perspective."</p>
+            </div>  
+            <script src="app.js"></script>
+        </body>
+    </html>
