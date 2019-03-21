@@ -1,0 +1,15 @@
+body{
+    background-image: url(https://images.pexels.com/photos/1229042/pexels-photo-1229042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.backBox{
+background-image: url(divback.jpg);
+position: absolute;
+left: 10%;
+right: 10%;
+top: 25%;
+bottom: 25%;
+background-size: cover;
+}

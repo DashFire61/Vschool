@@ -1,0 +1,57 @@
+body{
+    width: 100%;
+    height: 12960px;
+    margin: 0%;
+}
+
+.flaghold{
+    height: 1080px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0)
+}
+
+.absolute{
+    position: absolute;
+}
+
+.relative{
+    position: relative;
+}
+
+.belizeposition{
+    top: 0px;
+}
+
+.red{
+    background-color: red;
+}
+
+.bOne{
+    width: 100%;
+    height: 960px;
+    top: 50px;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.white{
+    background-color: white;
+}
+
+.bCircle{
+    border-radius: 50%;
+    width: 40%;
+    height: 768px; 
+    left: 30%;
+    top: 80px;
+}
+
+.aCircle{
+    border-radius: 50%;
+    width: 900px;
+    height: 750px; 
+    left: 0%;
+    top: 10px;
+}

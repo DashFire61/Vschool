@@ -1,0 +1,144 @@
+html, body {
+    padding: 0;
+    text-align: center;
+    font-family: platelet;
+    background-attachment: fixed;
+    background-color: rgb(0, 0, 0);
+    margin: 0px;
+}
+
+.background {
+    background-image: url("https://static.wixstatic.com/media/374676_ad65c8ec461740feb05d7885dba60f7f.jpg/v1/fill/w_1422,h_889,al_c,q_85/374676_ad65c8ec461740feb05d7885dba60f7f.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: fixed;
+    height: 1080px;
+    right: 10%;
+    left: 10%;
+}
+
+h1 {
+    color: rgb(122, 26, 7);
+    font-size: 4.25em;
+    margin-left: 0;
+    padding-left: 0;
+    display: inline;
+    position: relative;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 1.50em;
+    margin-left: 0;
+    padding-left: 0;
+    position: relative;
+}
+
+h4 {
+    color: rgb(122, 26, 7);
+    font-size: 3.25em;
+}
+
+p {
+    color: #ffffff;
+    font-size: 2.00em;
+    align-self: center;
+}
+
+img {
+    width: 4%;
+    height: auto;
+    float: left;
+    margin-left: 25%;
+    margin-right: 0%;
+    padding-right: 0%;
+}
+
+.headbar {
+    background-color: black;
+    margin: 0% ;
+}
+
+.semitrans {
+    background-color: rgba(0, 0, 0, 0.75);
+    background: 0.5;
+    height: 200px;
+    margin: 100px;
+}
+
+.video {
+    background-color: rgba(0, 0, 0, 0.75);
+    background: 0.5;
+    height: 500px;
+    margin: 100px;
+}
+
+a {
+    color: rgb(122, 26, 7);
+    font-size: 2.20em;
+    text-decoration: none
+}
+
+.Navbar {
+    color: rgb(255, 255, 255);
+    font-size: 1.50em;
+    background-color: black;
+    margin: .5% ;
+    position: relative;
+}
+
+.NavbarActive {
+    color: rgb(122, 26, 7)!important;
+    font-size: 1.50em;
+    background-color: black;
+    margin: .5% ;
+    clear: both;
+    text-align: center;
+    position: relative;
+}
+
+.clock {
+    color: rgb(122, 26, 7);
+    background-color: rgb(0, 0, 0);
+    font-family: platelet;
+} 
+
+button {
+    background-color: rgb(0, 0, 0);
+    color: rgb(122,26,7);
+    border-color: rgb(122, 26, 7)
+}
+
+button:visited {
+    text-decoration: none;
+}
+
+button:focus {
+    outline:0;
+}
+
+.fixed {
+    float: both;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: rgb(0, 0, 0) !important;
+    height: 50px;
+    width: 100%;
+}
+
+.blogcontainer {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    bottom: 0%;
+    top: 50px;
+    left: 20%;
+    right: 20%;
+}
+
+.postcontainer {
+    margin: 25%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
