@@ -1,0 +1,83 @@
+body{
+    width: 100%;
+    height: 12960px;
+    margin: 0%;
+}
+
+.flaghold{
+    height: 1080px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0)
+}
+
+.absolute{
+    position: absolute;
+}
+
+.relative{
+    position: relative;
+}
+
+.belizeposition{
+    top: 0px;
+}
+
+.red{
+    background-color: goldenrod;
+}
+
+.bOne{
+    width: 100%;
+    height: 960px;
+    top: 50px;
+}
+
+.blue{
+    background-color: rgb(115, 1, 160);
+}
+
+.white{
+    background-color: rgb(206, 223, 228);
+}
+
+.bCircle{
+    border-radius: 50%;
+    width: 950px;
+    height: 768px; 
+    left: 30%;
+    top: 80px;
+}
+
+.aCircle{
+    border-radius: 50%;
+    width: 900px;
+    height: 750px; 
+    left: 0%;
+    top: 10px;
+}
+
+body {
+    font-family:'Times New Roman', italic, cursive;
+    font-size: 30px;
+  }
+  
+  path {
+    fill: black;
+  }
+  
+  text {
+    fill: goldenrod;
+  }
+
+  svg{
+      overflow: visible
+  }
+
+  .size{
+      position: absolute;
+      width: 750px;
+      height: 700px;
+      transform: rotate(100deg);
+      top: 650px;
+      right: 400px;
+  }

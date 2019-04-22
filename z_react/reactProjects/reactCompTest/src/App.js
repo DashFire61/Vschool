@@ -108,7 +108,7 @@ function AboutUs() {
 
         <div style={bodyText}>
           <footer>
-            <p style={f}> © 2019 Changling Studios</p>
+            <p style={f}> © 2019 Changeling Studios</p>
           </footer>
         </div>
 
