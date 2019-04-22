@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios'
-import Results from 'Results.js'
+// import Results from 'Results'
 
 class App extends Component {
   constructor(){
@@ -70,7 +70,7 @@ handleSubmit = e => {
           <p>Status: alive, dead, unknown</p>
           <p>RewardrewardInCredits: 10000</p>
           <p>Allignment: light, dark, grey</p>
-          <p>Allegiance: jedi, sith, galactic republic, empire, eternal empire, old republic, old sith empire, new republic, first order, rebels, unaffiliated</p>
+          <p>Allegiance: jedi, sith, galactic republic, CIS, empire, rebels, eternal empire, old republic, old sith empire, new republic, first order, unaffiliated</p>
         </div>
         <form
         onSubmit={this.handleSubmit}>
@@ -113,7 +113,14 @@ handleSubmit = e => {
           <button>add new bounty</button>
         </form>
         <div>
-          <Results />
+          {this.state.bountys.map(bounty => <h1 key={bounty.firstName}>
+            <h1>{bounty.firstName}  {bounty.lastName}</h1>
+            <p>{bounty.status}</p>
+            <p>{bounty.rewardInCredits}</p>
+            <p>{bounty.allignment}</p>
+            <p>{bounty.allegiance}</p>
+            <p>{bounty._id}</p>
+          </h1>)}
         </div>
       </div>
     );

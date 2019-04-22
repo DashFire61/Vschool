@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import App from 'App.js'
+import React from 'react';
+// import App from 'App.js'
 
-App()
+// App()
 
 function Results(){ 
         {this.state.bountys.map(bounty => <h1 key={bounty.firstName}>{bounty.firstName}</h1>)}

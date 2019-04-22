@@ -27,7 +27,7 @@ const bountySchema = new Schema({
     allegiance:{
         type: String,
         required: true,
-        enum: [ "jedi", "sith", "galactic republic", "empire", "eternal empire", "old republic", "old sith empire", "new republic", "first order", "rebels", "unaffiliated",]
+        enum: [ "jedi", "sith", "galactic republic", "empire", "eternal empire", "old republic", "old sith empire", "new republic", "first order", "rebels", "unaffiliated", "CIS",]
     },
 })
 
