@@ -62,8 +62,16 @@ handleSubmit = e => {
 
 
 
-
   render() {
+    
+function remove(bountyToDelete){
+  axios.delete(`/bountys/${bountyToDelete}`)
+  .then(response => {
+    this.setState(prevState => ({
+      bountys: prevState.bountys.filter(bounty=>bounty._id !== bountyToDelete)
+    }))
+  })
+}
     return (
       <div>
         <div>
@@ -74,7 +82,9 @@ handleSubmit = e => {
           <p>RewardrewardInCredits: 10000</p>
           <p>Allignment: light, dark, grey</p>
           <p>Allegiance: jedi, sith, galactic republic, CIS, empire, rebels, eternal empire, old republic, old sith empire, new republic, first order, unaffiliated</p>
+          <p>Entries are case sensitive and must match.</p>
         </div>
+        <div className = {"formDiv"}>
         <form
         onSubmit={this.handleSubmit}>
           <input
@@ -115,14 +125,20 @@ handleSubmit = e => {
           placeholder="allegiance"/>
           <button>add new bounty</button>
         </form>
-        <div >
+        </div>
+        <div>
+           {/* if post has error post error here */}
+          <p></p>
+        </div>
+        <div>
           {this.state.bountys.map(bounty => <div className={"results"} key={bounty.firstName}>
+            <button onClick={()=>remove(bounty._id)} className={"x"}>x</button>
             <h1 className={bounty.allignment}>{bounty.firstName}  {bounty.lastName}</h1>
             <p className={bounty.status}>{bounty.status}</p>
             <p className={"money"}>{bounty.rewardInCredits}</p>
             <p className={bounty.allignment}>{bounty.allignment}</p>
             <p className={bounty.allegiance.replace(/\s+/g, '')}>{bounty.allegiance}</p>
-            <p>{bounty._id}</p>
+            <p className={"id"}>{bounty._id}</p>
           </div>)}
         </div>
       </div>

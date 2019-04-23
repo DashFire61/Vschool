@@ -49,7 +49,9 @@ input {
   display: block;
   border-color: yellow;
 }
-
+.formDiv{
+  width: 50%;
+}
 input::-webkit-input-placeholder {
   color: white !important;
 }
@@ -71,27 +73,27 @@ input:-ms-input-placeholder {
 }
 
 .dark {
-  color: red !important;
+  color: rgba(255, 0, 0, 0.411) !important;
 }
 
 .grey{
-  color: purple !important;
+  color: rgba(128, 0, 128, 0.445) !important;
 }
 
 .alive{
-  color: green;
+  color: rgba(0, 128, 0, 0.445);
 }
 
 .dead{
-  color: crimson;
+  color: rgba(220, 20, 60, 0.438);
 }
 
 .unknown{
-  color: aliceblue;
+  color: rgba(240, 248, 255, 0.486);
 }
 
 .money{
-  color: greenyellow;
+  color: rgba(172, 255, 47, 0.479);
 }
 
 .results{
@@ -103,42 +105,56 @@ input:-ms-input-placeholder {
   margin: 10px;
   background-image:url("Black-Etched-Steel-835x471.jpg");
   font-size: 25px;
+  text-shadow: 0px -1px 0px rgba(255,255,255,.5);
 }
 
 .jedi{
-  color: #2ea100 !important;
+  color: #2ea1007a !important;
 }
 .sith{
-  color: rgb(255, 0, 0) !important;
+  color: rgba(255, 0, 0, 0.5) !important;
 }
 .galacticrepublic{
-  color: rgb(131, 31, 31) !important;
+  color: rgba(131, 31, 31, 0.5) !important;
 }
 .CIS{
-  color: rgb(116, 146, 228) !important;
+  color: rgba(116, 146, 228, 0.466) !important;
 }
 .empire{
-  color: rgb(255, 0, 0) !important;
+  color: rgba(255, 0, 0, 0.479) !important;
 }
 .rebels{
-  color: #e49400 !important;
+  color: #e4940075 !important;
 
 }
 .eternalempire{
-  color: gold !important;
+  color: rgba(255, 217, 0, 0.514) !important;
 }
 .oldrepublic{
-  color: rgb(131, 31, 31) !important;
+  color: rgba(131, 31, 31, 0.452) !important;
 }
 .oldsithempire{
-  color: rgb(255, 0, 0) !important;
+  color: rgba(255, 0, 0, 0.418) !important;
 }
 .newrepublic{
-  color: rgb(36, 102, 243) !important;
+  color: rgba(36, 102, 243, 0.486) !important;
 }
 .firstorder{
-  color: rgb(255, 0, 0) !important;
+  color: rgba(255, 0, 0, 0.438) !important;
 }
 .unaffiliated{
-  color: tan !important;
+  color: rgba(210, 180, 140, 0.486) !important;
+}
+.id{
+  color: rgba(255, 255, 0, 0.432);
+}
+
+.x{
+  border-color: rgb(77, 70, 67);
+  background-color: rgba(36, 27, 24, 0) !important;
+  color: rgb(83, 65, 69);
+  font-size: 20px;
+  outline-color: rgba(145, 11, 11, 0);
+  text-shadow: 0px -1px 0px rgba(255,255,255,.5);
+  margin-left: 90%;
 }
