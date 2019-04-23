@@ -31,3 +31,114 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-image: url("moving-stars-on-black-background_41x3vg3x__F0000.png");
+  color: yellow;
+}
+
+button {
+  color: yellow;
+  background-color: black;
+  border-color: yellow;
+}
+
+input {
+  color: yellow;
+  background-color: black;
+  display: block;
+  border-color: yellow;
+}
+
+input::-webkit-input-placeholder {
+  color: white !important;
+}
+   
+input:-moz-placeholder { /* Firefox 18- */
+  color: white !important;  
+}
+   
+input::-moz-placeholder {  /* Firefox 19+ */
+  color: white !important;  
+}
+   
+input:-ms-input-placeholder {  
+  color: white !important;  
+}
+
+.light {
+  color: #61dafb !important;
+}
+
+.dark {
+  color: red !important;
+}
+
+.grey{
+  color: purple !important;
+}
+
+.alive{
+  color: green;
+}
+
+.dead{
+  color: crimson;
+}
+
+.unknown{
+  color: aliceblue;
+}
+
+.money{
+  color: greenyellow;
+}
+
+.results{
+  border-width: 5px;
+  border-color: rgb(36, 27, 24);
+  border-style: solid;
+  display: inline-block;
+  padding: 15px;
+  margin: 10px;
+  background-image:url("Black-Etched-Steel-835x471.jpg");
+  font-size: 25px;
+}
+
+.jedi{
+  color: #2ea100 !important;
+}
+.sith{
+  color: rgb(255, 0, 0) !important;
+}
+.galacticrepublic{
+  color: rgb(131, 31, 31) !important;
+}
+.CIS{
+  color: rgb(116, 146, 228) !important;
+}
+.empire{
+  color: rgb(255, 0, 0) !important;
+}
+.rebels{
+  color: #e49400 !important;
+
+}
+.eternalempire{
+  color: gold !important;
+}
+.oldrepublic{
+  color: rgb(131, 31, 31) !important;
+}
+.oldsithempire{
+  color: rgb(255, 0, 0) !important;
+}
+.newrepublic{
+  color: rgb(36, 102, 243) !important;
+}
+.firstorder{
+  color: rgb(255, 0, 0) !important;
+}
+.unaffiliated{
+  color: tan !important;
+}

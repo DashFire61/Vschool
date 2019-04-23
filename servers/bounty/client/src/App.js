@@ -60,6 +60,9 @@ handleSubmit = e => {
   .catch(err => console.log(err))
 }
 
+
+
+
   render() {
     return (
       <div>
@@ -112,15 +115,15 @@ handleSubmit = e => {
           placeholder="allegiance"/>
           <button>add new bounty</button>
         </form>
-        <div>
-          {this.state.bountys.map(bounty => <h1 key={bounty.firstName}>
-            <h1>{bounty.firstName}  {bounty.lastName}</h1>
-            <p>{bounty.status}</p>
-            <p>{bounty.rewardInCredits}</p>
-            <p>{bounty.allignment}</p>
-            <p>{bounty.allegiance}</p>
+        <div >
+          {this.state.bountys.map(bounty => <div className={"results"} key={bounty.firstName}>
+            <h1 className={bounty.allignment}>{bounty.firstName}  {bounty.lastName}</h1>
+            <p className={bounty.status}>{bounty.status}</p>
+            <p className={"money"}>{bounty.rewardInCredits}</p>
+            <p className={bounty.allignment}>{bounty.allignment}</p>
+            <p className={bounty.allegiance.replace(/\s+/g, '')}>{bounty.allegiance}</p>
             <p>{bounty._id}</p>
-          </h1>)}
+          </div>)}
         </div>
       </div>
     );
