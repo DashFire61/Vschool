@@ -1,0 +1,80 @@
+img{
+    width: 4.25vw;
+}
+
+body{
+    background-image: url("http://webgames.host/uploads/2016/08/super-mario-rampage.png");
+    background-size: 100%;
+    background-position-y: 140vh;
+}
+
+h1{
+    font-size: 3vw;
+    border-color: black;
+    border-width: 2vw;
+    border-style: double;
+    display: inline;
+    position: relative;
+    top: 6vh;
+    left: 6vw;
+}
+
+form{
+    font-size: 1.5vw;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr .5fr .5fr;
+    grid-template-rows: 1fr;
+    background-color: rgba(1, 1, 1, 0.322);
+    top: 35vh;
+    width: 90vw;
+    left: 4vw;
+    position: relative;
+    color: rgb(247, 252, 0);
+    height: 30vh;
+}
+
+li{
+    position: relative;
+}
+
+button{
+    width: 4vw;
+    height: 2vh;
+    position: relative;
+    top: 25.5vh
+}
+
+.bomb{
+    width: 5.85vw;
+}
+
+.cheep{
+    width:5.4vw;
+}
+
+.result{
+    position: relative;
+    color: rgb(247, 252, 0);
+    
+}
+
+h2{
+    font-size: 6vw;
+    position: relative;
+    bottom: 6vh;
+    left: 1vw;
+}
+
+footer{
+    position: fixed;
+    bottom: 0vh;
+    color: white;
+    font-size: 1vw;
+    background-color: rgb(100, 81, 57);
+    display: block;
+    width: 100vw;
+    left: 0vw;
+}

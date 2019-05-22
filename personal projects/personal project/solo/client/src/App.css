@@ -1,0 +1,44 @@
+.container > div {
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+
+}
+.container{
+    display: grid;
+    height: 350vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+html, body {
+    margin: 0px;
+    background-color: rgb(202, 30, 218);
+}
+
+.container > div:nth-child(1n) {
+  background-color:white;
+  color: black;	
+}
+
+.container > div:nth-child(3n) {
+  background-color: rgb(49, 133, 115);
+  color: black;
+}
+
+.container > div:nth-child(2n) {
+      background-color: #ff6e69;
+}
+
+.container > div:nth-child(4n) {
+      background-color: #ffcc5c;
+}
+
+
+.container > div:nth-child(17n) {
+    background-color: #f0ba56;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}

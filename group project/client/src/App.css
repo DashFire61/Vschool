@@ -1,0 +1,10 @@
+body{
+    background-color: black;
+}
+
+.gameBox{
+    background-color: white !important;
+    size: 100%;
+    margin: 25%;
+    position: absolute;
+}

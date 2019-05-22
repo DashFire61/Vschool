@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios'
-// import Results from 'Results'
+// import {Switch, Route} from 'react-router-dom'
+import SignIn from './SignIN'
+import LoggedIN from './LoggedIN'
 
 class App extends Component {
   constructor(){
@@ -15,6 +17,12 @@ class App extends Component {
       rewardInCredits: "",
       allignment: "",
       allegiance: "",
+      _id: "",
+      user: {
+        username: "",
+        acceptedBounties: "",
+        _id:"",
+      },
     }
   }
 
@@ -30,120 +38,123 @@ class App extends Component {
   }
 
 
-handleChange = e => {
-  const {name, value} = e.target
-  this.setState({[name]:value})
-}
-
-handleSubmit = e => {
-  e.preventDefault()
-  const newBounty = {
-    firstName: this.state.firstName,
-    lastName: this.state.lastName,
-    status: this.state.status,
-    rewardInCredits: this.state.rewardInCredits,
-    allignment: this.state.allignment,
-    allegiance: this.state.allegiance,
+  handleChange = e => {
+    const {name, value} = e.target
+    this.setState({[name]:value})
   }
-  axios.post("/bountys", newBounty)
-    .then(response => {
-      this.setState({
-        bountys: response.data,
-        firstName: "",
-        lastName: "",
-        status: "",
-        rewardInCredits: "",
-        allignment: "",
-        allegiance: "",
+  userHandleChange = e => {
+    const {name, value} = e.target
+    this.setState({user:{
+      [name]:value,
+      _id: "",
+    }})
+  }
+
+  handleSubmit = e => {
+    e.preventDefault()
+    const newBounty = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      status: this.state.status,
+      rewardInCredits: this.state.rewardInCredits,
+      allignment: this.state.allignment,
+      allegiance: this.state.allegiance,
+    }
+    axios.post(`/bountys/${this.state.user._id}`, newBounty)
+      .then(response => {
+        this.setState(prevState =>({
+          bountys: [...prevState.bountys ,response.data],
+          firstName: "",
+          lastName: "",
+          status: "",
+          rewardInCredits: "",
+          allignment: "",
+          allegiance: "",
+        }))
+    })
+    .catch(err => console.log(err))
+  }
+
+
+  signUpSubmit = e => {
+    e.preventDefault()
+    const newUser = {
+      username: this.state.user.username,
+      acceptedBounties: [],
+    }
+    axios.post(`/user/signup`, newUser)
+      .then(response => {
+        this.setState(prevState =>({
+          user: {
+            username: response.data.username,
+            acceptedBounties: response.data.acceptedBounties,
+            _id: response.data._id,
+          },
+        }))
       })
-  })
-  .catch(err => console.log(err))
-}
-
-
-
-  render() {
-    
-function remove(bountyToDelete){
-  axios.delete(`/bountys/${bountyToDelete}`)
-  .then(response => {
-    this.setState(prevState => ({
-      bountys: prevState.bountys.filter(bounty=>bounty._id !== bountyToDelete)
-    }))
-  })
-}
-    return (
-      <div>
-        <div>
-          <h1>Entry format</h1>
-          <p>First Name: first</p>
-          <p>Nast Name: last</p>
-          <p>Status: alive, dead, unknown</p>
-          <p>RewardrewardInCredits: 10000</p>
-          <p>Allignment: light, dark, grey</p>
-          <p>Allegiance: jedi, sith, galactic republic, CIS, empire, rebels, eternal empire, old republic, old sith empire, new republic, first order, unaffiliated</p>
-          <p>Entries are case sensitive and must match.</p>
-        </div>
-        <div className = {"formDiv"}>
-        <form
-        onSubmit={this.handleSubmit}>
-          <input
-          name = "firstName" 
-          type ="text" 
-          onChange={this.handleChange} 
-          value={this.state.firstName}
-          placeholder="First Name"/>
-          <input
-          name = "lastName" 
-          type ="text" 
-          onChange={this.handleChange} 
-          value={this.state.lastName}
-          placeholder="last Name"/>
-          <input
-          name = "status" 
-          type ="text" 
-          onChange={this.handleChange} 
-          value={this.state.status}
-          placeholder="status"/>
-          <input
-          name = "rewardInCredits" 
-          type ="number" 
-          onChange={this.handleChange} 
-          value={this.state.rewardInCredits}
-          placeholder="Reward In Credits"/>
-          <input
-          name = "allignment" 
-          type ="text" 
-          onChange={this.handleChange} 
-          value={this.state.allignment}
-          placeholder="allignment"/>
-          <input
-          name = "allegiance" 
-          type ="text" 
-          onChange={this.handleChange} 
-          value={this.state.allegiance}
-          placeholder="allegiance"/>
-          <button>add new bounty</button>
-        </form>
-        </div>
-        <div>
-           {/* if post has error post error here */}
-          <p></p>
-        </div>
-        <div>
-          {this.state.bountys.map(bounty => <div className={"results"} key={bounty.firstName}>
-            <button onClick={()=>remove(bounty._id)} className={"x"}>x</button>
-            <h1 className={bounty.allignment}>{bounty.firstName}  {bounty.lastName}</h1>
-            <p className={bounty.status}>{bounty.status}</p>
-            <p className={"money"}>{bounty.rewardInCredits}</p>
-            <p className={bounty.allignment}>{bounty.allignment}</p>
-            <p className={bounty.allegiance.replace(/\s+/g, '')}>{bounty.allegiance}</p>
-            <p className={"id"}>{bounty._id}</p>
-          </div>)}
-        </div>
-      </div>
-    );
+      .catch(err => console.log(err))
   }
+
+
+
+  signInSubmit = e => {
+    e.preventDefault()
+    axios.get(`/user/${this.state.user.username}`)
+      .then(response => {
+        this.setState({
+          user: {
+            username: response.data.username,
+            acceptedBounties: response.data.acceptedBounties,
+            _id: response.data._id,
+          }
+        })
+      
+      })
+  }
+
+  handleEditChange = e => {
+    const {name, value} = e.target
+    this.setState({
+      [name]: value
+    })
 }
+
+handleEditSubmit = (bountyToEdit) => {
+    const updatedUser = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      status: this.state.status,
+      rewardInCredits: this.state.rewardInCredits,
+      allignment: this.state.allignment,
+      allegiance: this.state.allegiance,
+  }
+  axios.put(`/bountys/${bountyToEdit}`, updatedUser)
+}
+
+
+  remove = (bountyToDelete) => {
+    axios.delete(`/bountys/${bountyToDelete}`)
+    .then(response => {
+      this.setState(prevState => ({
+        bountys: prevState.bountys.filter(bounty=>bounty._id !== bountyToDelete)
+      }))
+    })
+  }
+
+  render(){
+    if(this.state.user._id === ""){
+      return(
+        <SignIn {...this.state}userHandleChange={this.userHandleChange}signInSubmit={this.signInSubmit}signUpSubmit={this.signUpSubmit}/>
+      )
+    }
+    return(
+      <LoggedIN {...this.state}handleChange={this.handleChange}handleSubmit={this.handleSubmit} remove={this.remove} handleEditSubmit={this.handleEditSubmit} handleEditChange={this.handleEditChange}/>
+    )
+  }
+
+
+
+}
+
 
 export default App;

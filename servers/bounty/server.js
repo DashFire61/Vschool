@@ -3,11 +3,12 @@ const app = express()
 const morgan = require('morgan')
 const PORT = process.env.PORT || 6969
 const mongoose = require('mongoose')
+const path = require("path")
 
 
 app.use(express.json())
 app.use(morgan('dev'))
-
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 //connect to mongodb
 mongoose.connect("mongodb://localhost:27017/bountys", {useNewUrlParser: true}, () => {
@@ -18,7 +19,7 @@ mongoose.connect("mongodb://localhost:27017/bountys", {useNewUrlParser: true}, (
 
 
 app.use("/bountys", require('./routes/bountysRoutes.js'))
-
+app.use("/user", require('./routes/userRoutes.js'))
 
 //global sever error handler
 app.use((err,req,res,next)=> {
@@ -27,6 +28,12 @@ res.send({errMsg: err.message})
 })
 
 
+
+
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 
 // axios.post("/bountys", {}).then(res =>{

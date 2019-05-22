@@ -29,6 +29,11 @@ const bountySchema = new Schema({
         required: true,
         enum: [ "jedi", "sith", "galactic republic", "empire", "eternal empire", "old republic", "old sith empire", "new republic", "first order", "rebels", "unaffiliated", "CIS",]
     },
+    user:{
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: true,
+    },
 })
 
 module.exports = mongoose.model("Bounty", bountySchema)

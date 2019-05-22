@@ -30,8 +30,9 @@ bountyRouter.get("/", async (req,res,next)=>{
 
 
 //post
-bountyRouter.post("/", (req,res,next)=>{
+bountyRouter.post("/:userID", (req,res,next)=>{
     const newBounty = new Bounty(req.body)
+    newBounty.user = req.params.userID
     newBounty.save((err, newSavedBounty)=>{
     if(err){
         res.status(500)

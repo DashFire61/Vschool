@@ -72,12 +72,26 @@ input:-ms-input-placeholder {
   color: #61dafb !important;
 }
 
+.lightName {
+  color: rgb(54, 43, 35) !important;
+  text-shadow: 0px -1px 0px rgba(0, 195, 255, 0.5);
+}
+
 .dark {
   color: rgba(255, 0, 0, 0.411) !important;
+}
+.darkName {
+  color: rgb(0, 0, 0) !important;
+  text-shadow: 0px -1px 0px rgba(255, 0, 0, 0.5);
 }
 
 .grey{
   color: rgba(128, 0, 128, 0.445) !important;
+}
+
+.greyName{
+  color: rgb(36, 36, 36) !important;
+  text-shadow: 0px -1px 0px rgba(255, 0, 255, 0.5);
 }
 
 .alive{
@@ -85,18 +99,20 @@ input:-ms-input-placeholder {
 }
 
 .dead{
-  color: rgba(220, 20, 60, 0.438);
+  color: rgba(220, 20, 60, 0.479);
 }
 
 .unknown{
-  color: rgba(240, 248, 255, 0.486);
+  color: rgba(255, 255, 255, 0.479);
 }
 
 .money{
-  color: rgba(172, 255, 47, 0.479);
+  color: rgba(36, 27, 24, 0.863) !important;
 }
 
+
 .results{
+  position: relative;
   border-width: 5px;
   border-color: rgb(36, 27, 24);
   border-style: solid;
@@ -104,6 +120,7 @@ input:-ms-input-placeholder {
   padding: 15px;
   margin: 10px;
   background-image:url("Black-Etched-Steel-835x471.jpg");
+  background-size: auto 100%;
   font-size: 25px;
   text-shadow: 0px -1px 0px rgba(255,255,255,.5);
 }
@@ -146,7 +163,7 @@ input:-ms-input-placeholder {
   color: rgba(210, 180, 140, 0.486) !important;
 }
 .id{
-  color: rgba(255, 255, 0, 0.432);
+  color: rgba(36, 27, 24, 0.692) !important;
 }
 
 .x{
@@ -156,5 +173,36 @@ input:-ms-input-placeholder {
   font-size: 20px;
   outline-color: rgba(145, 11, 11, 0);
   text-shadow: 0px -1px 0px rgba(255,255,255,.5);
-  margin-left: 90%;
+  margin-left: 0%;
+  right: 0%;
+  position: relative;
+}
+.x2{
+  border-color: rgb(77, 70, 67);
+  background-color: rgba(36, 27, 24, 0) !important;
+  color: rgb(83, 65, 69);
+  font-size: 20px;
+  outline-color: rgba(145, 11, 11, 0);
+  text-shadow: 0px -1px 0px rgba(255,255,255,.5);
+  margin-left: 0%;
+  right: 1%;
+  top: 1%;
+  position: absolute;
+}
+
+
+.signin{
+  background-color: rgba(255, 255, 0, 0);
+  border-color: yellow;
+  border-style: solid;
+  position: absolute;
+  padding: 2%;
+  width: 10%;
+  left: 41%;
+  top: 35%
+}
+
+.signform{
+  position: relative;
+  width: 100%;
 }
